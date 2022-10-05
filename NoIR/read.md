@@ -1,0 +1,1 @@
+NoIR camera was tested
