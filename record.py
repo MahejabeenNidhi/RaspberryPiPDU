@@ -3,6 +3,7 @@
 import numpy as np
 import cv2
 import time
+from datetime import datetime
 import os
 import random
 import sys
@@ -13,11 +14,7 @@ width = 864
 height = 640
 video_codec = cv2.VideoWriter_fourcc("D", "I", "V", "X")
 
-name = random.randint(0, 1000)
-print(name)
-if os.path.isdir(str(name)) is False:
-    name = random.randint(0, 1000)
-    name = str(name)
+name = datetime.now()
 
 name = os.path.join(os.getcwd(), str(name))
 print("ALl logs saved in dir:", name)
