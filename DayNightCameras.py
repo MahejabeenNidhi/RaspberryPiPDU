@@ -13,7 +13,7 @@ import sys
 fps = 24
 width = 864
 height = 640
-video_codec = cv2.VideoWriter_fourcc("D", "I", "V", "X")
+video_codec = cv2.VideoWriter_fourcc("m", "p", "4", "v")
 
 # setting folder name
 name = datetime.now()
@@ -37,8 +37,8 @@ cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 # initialisation
 start = time.time()
 video_file_count = 1
-DV_video_file = os.path.join(name, "DV_" + str(video_file_count) + ".avi")
-NV_video_file = os.path.join(name, "NV_" + str(video_file_count) + ".avi")
+DV_video_file = os.path.join(name, "DV_" + str(video_file_count) + ".mp4")
+NV_video_file = os.path.join(name, "NV_" + str(video_file_count) + ".mp4")
 
 # Create a video write before entering the loop
 DV_video_writer = cv2.VideoWriter(
@@ -56,11 +56,11 @@ while cap.isOpened():
         if time.time() - start > 60:
             start = time.time()
             video_file_count += 1
-            DV_video_file = os.path.join(name, "DV_" + str(video_file_count) + ".avi")
+            DV_video_file = os.path.join(name, "DV_" + str(video_file_count) + ".mp4")
             DV_video_writer = cv2.VideoWriter(
                 DV_video_file, video_codec, fps, (int(webcam.get(3)), int(webcam.get(4)))
             )
-            NV_video_file = os.path.join(name, "NV_" + str(video_file_count) + ".avi")
+            NV_video_file = os.path.join(name, "NV_" + str(video_file_count) + ".mp4")
             NV_video_writer = cv2.VideoWriter(
                 NV_video_file, video_codec, fps, (int(cap.get(3)), int(cap.get(4)))
             )
