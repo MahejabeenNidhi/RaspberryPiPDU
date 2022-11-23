@@ -20,3 +20,16 @@ Needed for ribbon camera
 ```sudo apt-get install python3-opencv```
 
 ```sudo pip install imutils```
+
+## Access files on Mac
+
+### View files or execute scripts
+
+Open terminal on Mac
+```ssh pdu@dogmoves.local```
+
+They will ask for a password. The password for this is "ebony"
+
+### Copy files to Mac
+
+```scp pdu@dogmoves:/home/pdu/record/2022-11-23-10:36/NV_7.mp4 /users/nidhi/Desktop```
