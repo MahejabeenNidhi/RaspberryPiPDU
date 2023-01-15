@@ -1,6 +1,12 @@
 # RaspberryPiPDU
 Creating a camera solution for PDU
 
+Update device
+
+```sudo apt-get update```
+
+```sudo apt-get upgrade -y```
+
 ## Enable legacy camera support
 
 Needed for ribbon camera
