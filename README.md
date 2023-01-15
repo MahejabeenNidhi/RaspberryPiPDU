@@ -77,6 +77,7 @@ cd /
 If it doesn't work, check the log file
 
 ```cd logs```
+
 ```cat cronlog```
 
 
