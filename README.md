@@ -26,9 +26,13 @@ Needed for ribbon camera
 1. Create a directory called record in the root directory
 2. Download python script in the record directory, i.e. record.py
 3. Open terminal, go to record directory
+
 ```cd record```
+
 4. Create launcher shell
+
 ```nano launcher.sh```
+
 5. This will launch an editor. Type in the following script
 
 ```
@@ -43,21 +47,35 @@ cd /
 ```
 
 6. Make the launcher script executable
+
 ```chmod 755 launcher.sh```
+
 7. Test it. This should run the Python code
+
 ```sh launcher.sh```
+
 8. Navigate back to home directory 
+
 ```cd```
+
 9. Create a logs directory
+
 ```mkdir logs```
+
 10. Add to Crontab. Type in
+
 ```sudo crontab -e```
+
 11. Enter the line
-```@reboot sh /home/pi/bbt/launcher.sh >/home/pi/logs/cronlog 2>&1```
+
+```@reboot sh /home/pdu/record/launcher.sh >/home/pdu/logs/cronlog 2>&1```
+
 12. Reboot to check
+
 ```sudo reboot```
 
 If it doesn't work, check the log file
+
 ```cd logs```
 ```cat cronlog```
 
@@ -67,6 +85,7 @@ If it doesn't work, check the log file
 ### View files or execute scripts
 
 Open terminal on Mac
+
 ```ssh pdu@dogmoves.local```
 
 They will ask for a password. The password for this is "ebony"
