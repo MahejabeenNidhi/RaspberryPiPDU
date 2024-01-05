@@ -95,7 +95,7 @@ Open terminal on Mac
 
 ```ssh pdu@dogmoves.local```
 
-They will ask for a password. The password for this is "ebony"
+They will ask for a password.
 
 ### Copy files to Mac
 
